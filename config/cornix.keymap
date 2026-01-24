@@ -143,11 +143,6 @@
             if-layers = <3 2>;
             then-layer = <4>;
         };
-
-        German {
-            if-layers = <0>;
-            then-layer = <8>;
-        };
     };
 
     combos {
@@ -190,7 +185,7 @@
         ToBase {
             bindings = <&to 0>;
             key-positions = <15 20>;
-            layers = <8>;
+            layers = <0>;
         };
     };
 
