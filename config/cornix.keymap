@@ -143,6 +143,11 @@
             if-layers = <3 2>;
             then-layer = <4>;
         };
+
+        German {
+            if-layers = <0>;
+            then-layer = <8>;
+        };
     };
 
     combos {
@@ -174,6 +179,18 @@
         layer4 {
             bindings = <&kp N4>;
             key-positions = <5 6>;
+        };
+
+        SwitchGerman {
+            bindings = <&to 8>;
+            key-positions = <15 20>;
+            layers = <0>;
+        };
+
+        ToBase {
+            bindings = <&to 0>;
+            key-positions = <15 20>;
+            layers = <8>;
         };
     };
 
@@ -315,6 +332,20 @@
 &none       &none         &none         &none         &none         &bootloader   &trans  &trans  &bootloader  &none  &none   &none  &none  &none
 &none       &none         &none         &none         &none         &none                         &none        &none  &kp N7  &none  &none  &none
             >;
+        };
+
+        German {
+            display-name = "Base";
+            bindings = <
+&kp ESC  &kp Q            &kp W         &kp E         &kp R                &kp T                &kp DE_Z   &kp U                &kp I            &kp O         &kp P                    &kp DE_U_UMLAUT
+&kp TAB  &hm_l LCTRL A    &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL DE_O_UMLAUT  &kp DE_A_UMLAUT
+&mo 4    &hm_l LGUI DE_Y  &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &kp FSLH                 &kp BACKSPACE
+&none    &none            &none         &lt 6 ESCAPE  &lt 5 SPACE          &mo 2                &kp ENTER  &mo 3                &lt 2 BACKSPACE  &none         &none                    &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
