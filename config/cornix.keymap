@@ -134,6 +134,24 @@
             tapping-term-ms = <HM_TAPPING_TERM>;
             quick-tap-ms = <200>;
         };
+
+        de_qoutes: de_qoutes {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_QOUTES";
+            bindings = <&kp DE_APOS>, <&kp DE_DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_backsl_pipe: de_backsl_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_BACKSL_PIPE";
+            bindings = <&kp DE_BACKSLASH>, <&kp DE_PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -215,8 +233,8 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC  &kp Q          &kp W         &kp E         &kp R                &kp T                &kp Y      &kp U                &kp I            &kp O         &kp P             &kp NON_US_BACKSLASH
-&kp TAB  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL SEMI  &kp DE_APOSTROPHE
+&kp ESC  &kp Q          &kp W         &kp E         &kp R                &kp T                &kp Y      &kp U                &kp I            &kp O         &kp P             &de_backsl_pipe
+&kp TAB  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL SEMI  &de_qoutes
 &mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &kp FSLH          &kp BACKSPACE
 &none    &none          &none         &lt 6 ESCAPE  &lt 5 SPACE          &mo 2                &kp ENTER  &mo 3                &lt 2 BACKSPACE  &none         &none             &none
             >;
