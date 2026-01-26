@@ -409,5 +409,19 @@
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp PG_UP PG_DN>;
         };
+
+        de_numbers {
+            display-name = "DENumbers";
+            bindings = <
+&trans  &kp DE_N1          &kp DE_N2         &kp DE_N3          &kp DE_N4            &kp DE_N5                  &trans  &trans               &trans         &trans        &trans            &trans
+&trans  &hm_l LCTRL DE_N6  &hm_l LALT DE_N7  &hm_l LCTRL DE_N8  &hm_shift_l LSHFT F  &kp DE_N0                  &trans  &hm_shift_r RSHFT J  &hm_r RCTRL K  &hm_r RALT L  &hm_r RCTRL SEMI  &trans
+&trans  &trans             &trans            &trans             &trans               &trans     &trans  &trans  &trans  &trans               &trans         &trans        &trans            &trans
+&none   &none              &none             &trans             &trans               &trans                     &trans  &trans               &trans         &none         &none             &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
+        };
     };
 };
