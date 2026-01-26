@@ -175,6 +175,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        de_slash_question: de_slash_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_SLASH_QUESTION";
+            bindings = <&kp DE_SLASH>, <&kp DE_QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -240,6 +249,11 @@
             key-positions = <23 16>;
             layers = <0>;
         };
+
+        jk_esc {
+            bindings = <&kp ESC>;
+            key-positions = <19 20>;
+        };
     };
 
     keymap {
@@ -258,7 +272,7 @@
             bindings = <
 &kp ESC  &kp Q          &kp W         &kp E         &kp R                &kp T                &kp Y      &kp U                &kp I            &kp O         &kp P               &de_backsl_pipe
 &kp TAB  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r_semi RCTRL 0  &de_qoutes
-&mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &kp FSLH            &kp BACKSPACE
+&mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &de_slash_question  &kp BACKSPACE
 &none    &none          &none         &lt 6 ESCAPE  &lt 5 SPACE          &mo 2                &kp ENTER  &mo 3                &lt 2 BACKSPACE  &none         &none               &none
             >;
 
