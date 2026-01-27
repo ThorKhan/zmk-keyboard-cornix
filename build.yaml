@@ -22,10 +22,10 @@ include:
   #   shield: cornix_dongle_adapter dongle_screen
   #   snippet: studio-rpc-usb-uart
   #   artifact-name: cornix_dongle_zds_see
-  - board: nice_nano
-    shield: cornix_dongle_adapter dongle_screen
-    snippet: studio-rpc-usb-uart
-    artifact-name: cornix_dongle_zds_nano
+  # - board: nice_nano
+  #   shield: cornix_dongle_adapter dongle_screen
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: cornix_dongle_zds_nano
   - board: cornix_left
     # shield: cornix_indicator
     artifact-name: cornix_left_default_nosd
