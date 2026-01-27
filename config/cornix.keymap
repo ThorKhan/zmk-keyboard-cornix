@@ -184,6 +184,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        de_comma: de_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_COMMA";
+            bindings = <&kp DE_COMMA>, <&kp DE_LT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_dot: de_dot {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_DOT";
+            bindings = <&kp DE_DOT>, <&kp DE_GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -272,7 +290,7 @@
             bindings = <
 &kp ESC  &kp Q          &kp W         &kp E         &kp R                &kp T                &kp Y      &kp U                &kp I            &kp O         &kp P               &de_backsl_pipe
 &kp TAB  &hm_l LCTRL A  &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r_semi RCTRL 0  &de_qoutes
-&mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &de_slash_question  &kp BACKSPACE
+&mo 4    &hm_l LGUI Z   &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &de_comma        &de_dot       &de_slash_question  &kp BACKSPACE
 &none    &none          &none         &lt 6 ESCAPE  &lt 5 SPACE          &mo 2                &kp ENTER  &mo 3                &lt 2 BACKSPACE  &none         &none               &none
             >;
 
@@ -413,10 +431,10 @@
         de_numbers {
             display-name = "DENumbers";
             bindings = <
-&trans  &kp DE_N1          &kp DE_N2         &kp DE_N3          &kp DE_N4            &kp DE_N5                  &trans  &trans               &trans         &trans        &trans            &trans
-&trans  &hm_l LCTRL DE_N6  &hm_l LALT DE_N7  &hm_l LCTRL DE_N8  &hm_shift_l LSHFT F  &kp DE_N0                  &trans  &hm_shift_r RSHFT J  &hm_r RCTRL K  &hm_r RALT L  &hm_r RCTRL SEMI  &trans
-&trans  &trans             &trans            &trans             &trans               &trans     &trans  &trans  &trans  &trans               &trans         &trans        &trans            &trans
-&none   &none              &none             &trans             &trans               &trans                     &trans  &trans               &trans         &none         &none             &none
+&trans  &kp DE_N1          &kp DE_N2         &kp DE_N3          &kp DE_N4                &kp DE_N5                  &kp DE_N6  &kp DE_N7            &kp DE_N8      &kp DE_N9     &kp DE_N0         &trans
+&trans  &hm_l LCTRL DE_N6  &hm_l LALT DE_N7  &hm_l LCTRL DE_N8  &hm_shift_l LSHFT DE_N9  &kp DE_N0                  &trans     &hm_shift_r RSHFT J  &hm_r RCTRL K  &hm_r RALT L  &hm_r RCTRL SEMI  &trans
+&trans  &trans             &trans            &trans             &trans                   &trans     &trans  &trans  &trans     &trans               &trans         &trans        &trans            &trans
+&none   &none              &none             &trans             &trans                   &trans                     &trans     &trans               &trans         &none         &none             &none
             >;
 
             sensor-bindings =
