@@ -202,6 +202,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        de_ue_sharp_s: de_ue_sharp_s {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DE_UE_SHARP_S";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT>, <&kp DE_SHARP_S>;
+        };
     };
 
     conditional_layers {
@@ -300,10 +307,10 @@
         German {
             display-name = "German";
             bindings = <
-&kp ESC  &kp Q            &kp W         &kp E         &kp R                &kp T                &kp DE_Z   &kp U                &kp I            &kp O         &kp P                    &kp DE_U_UMLAUT
-&kp TAB  &hm_l LCTRL A    &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL DE_O_UMLAUT  &kp DE_A_UMLAUT
-&mo 6    &hm_l LGUI DE_Y  &kp X         &kp C         &kp V                &kp B  &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &de_slash_question       &kp BACKSPACE
-&none    &none            &none         &lt 8 ESCAPE  &lt 7 SPACE          &mo 3                &kp ENTER  &mo 4                &lt 3 BACKSPACE  &none         &none                    &none
+&kp ESC  &kp DE_Q         &kp DE_W      &kp DE_E      &kp DE_R             &kp DE_T                &kp DE_Z   &kp U                &kp I            &kp O         &kp P                    &de_ue_sharp_s
+&kp TAB  &hm_l LCTRL A    &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                   &kp H      &hm_shift_r RSHFT J  &hm_r RGUI K     &hm_r RALT L  &hm_r RCTRL DE_O_UMLAUT  &kp DE_A_UMLAUT
+&mo 6    &hm_l LGUI DE_Y  &kp X         &kp C         &kp V                &kp B     &none  &none  &kp N      &kp M                &kp COMMA        &kp DOT       &de_slash_question       &kp BACKSPACE
+&none    &none            &none         &lt 8 ESCAPE  &lt 7 SPACE          &mo 3                   &kp ENTER  &mo 4                &lt 3 BACKSPACE  &none         &none                    &none
             >;
 
             sensor-bindings =
