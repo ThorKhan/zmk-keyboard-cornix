@@ -329,10 +329,10 @@
         German {
             display-name = "German";
             bindings = <
-&kp ESC  &kp DE_Q          &kp DE_W         &de_e_dquotes    &kp DE_R                &kp DE_T                &kp DE_Z   &kp DE_U                &de_i_squotes    &kp DE_O         &kp DE_P                 &de_ue_sharp_s
-&kp TAB  &hm_l LCTRL DE_A  &hm_l LALT DE_S  &hm_l LGUI DE_D  &hm_shift_l LSHFT DE_F  &kp DE_G                &kp DE_H   &hm_shift_r RSHFT DE_J  &hm_r RGUI DE_K  &hm_r RALT DE_L  &hm_r RCTRL DE_O_UMLAUT  &kp DE_A_UMLAUT
-&mo 7    &hm_l LGUI DE_Y   &kp DE_X         &kp DE_C         &kp DE_V                &kp DE_B  &none  &none  &kp DE_N   &kp DE_M                &kp DE_COMMA     &kp DE_PERIOD    &kp DE_MINUS             &kp BACKSPACE
-&none    &none             &none            &lt 9 ESCAPE     &lt 8 SPACE             &mo 5                   &kp ENTER  &mo 4                   &lt 3 BACKSPACE  &none            &none                    &none
+&kp ESC  &kp DE_Q          &kp DE_W         &de_e_dquotes    &kp DE_R                &kp DE_T                           &kp DE_Z   &kp DE_U                &de_i_squotes    &kp DE_O         &kp DE_P                 &de_ue_sharp_s
+&kp TAB  &hm_l LCTRL DE_A  &hm_l LALT DE_S  &hm_l LGUI DE_D  &hm_shift_l LSHFT DE_F  &kp DE_G                           &kp DE_H   &hm_shift_r RSHFT DE_J  &hm_r RGUI DE_K  &hm_r RALT DE_L  &hm_r RCTRL DE_O_UMLAUT  &kp DE_A_UMLAUT
+&mo 7    &hm_l LGUI DE_Y   &kp DE_X         &kp DE_C         &kp DE_V                &kp DE_B  &kp K_PLAY_PAUSE  &none  &kp DE_N   &kp DE_M                &kp DE_COMMA     &kp DE_PERIOD    &kp DE_MINUS             &kp BACKSPACE
+&none    &none             &none            &lt 9 ESCAPE     &lt 8 SPACE             &mo 5                              &kp ENTER  &mo 4                   &lt 3 BACKSPACE  &none            &none                    &none
             >;
 
             sensor-bindings =
@@ -398,7 +398,7 @@
         DE_Symbols {
             display-name = "DE Symbols";
             bindings = <
-&none  &kp DE_EXCLAMATION  &kp DE_AT_SIGN  &kp DE_HASH  &kp DE_DOLLAR  &kp DE_PERCENT                  &kp DE_LESS_THAN   &kp DE_AMPS   &kp DE_STAR  &kp DE_LPAR  &kp DE_RPAR       &kp DE_PIPE
+&none  &kp DE_EXCLAMATION  &kp DE_AT_SIGN  &kp DE_HASH  &kp DE_DOLLAR  &kp DE_PERCENT                  &kp DE_LESS_THAN   &kp DE_AMPS   &kp DE_STAR  &kp DE_LPAR  &kp DE_RPAR       &kp PIPE2
 &none  &none               &none           &none        &kp GRAVE      &kp TILDE                       &kp DE_MINUS       &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT  &kp DE_BACKSLASH  &kp DE_ACUTE
 &none  &none               &none           &none        &none          &none           &trans  &trans  &kp DE_UNDERSCORE  &kp DE_PLUS   &kp DE_LBRC  &kp DE_RBRC  &kp DE_TILDE      &kp BACKSPACE
 &none  &none               &none           &none        &trans         &trans                          &kp TILDE          &trans        &kp GRAVE    &none        &none             &none
