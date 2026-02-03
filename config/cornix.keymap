@@ -208,6 +208,15 @@
             #binding-cells = <0>;
             bindings = <&kp DE_U_UMLAUT>, <&kp DE_SHARP_S>;
         };
+
+        de_gr_less: de_gr_less {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_GR_LESS";
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
