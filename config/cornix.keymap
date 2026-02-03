@@ -217,6 +217,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        de_e_dquotes: de_e_dquotes {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DE_E_DQUOTES";
+            #binding-cells = <0>;
+            bindings = <&kp DE_E>, <&kp DE_DOUBLE_QUOTES>;
+        };
+
+        de_i_squotes: de_i_squotes {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DE_I_SQUOTES";
+            #binding-cells = <0>;
+            bindings = <&kp DE_I>, <&kp DE_SINGLE_QUOTE>;
+        };
     };
 
     conditional_layers {
@@ -315,7 +329,7 @@
         German {
             display-name = "German";
             bindings = <
-&kp ESC  &kp DE_Q          &kp DE_W         &kp DE_E         &kp DE_R                &kp DE_T                &kp DE_Z   &kp DE_U                &kp DE_I         &kp DE_O         &kp DE_P                 &de_ue_sharp_s
+&kp ESC  &kp DE_Q          &kp DE_W         &de_e_dquotes    &kp DE_R                &kp DE_T                &kp DE_Z   &kp DE_U                &de_i_squotes    &kp DE_O         &kp DE_P                 &de_ue_sharp_s
 &kp TAB  &hm_l LCTRL DE_A  &hm_l LALT DE_S  &hm_l LGUI DE_D  &hm_shift_l LSHFT DE_F  &kp DE_G                &kp DE_H   &hm_shift_r RSHFT DE_J  &hm_r RGUI DE_K  &hm_r RALT DE_L  &hm_r RCTRL DE_O_UMLAUT  &kp DE_A_UMLAUT
 &mo 7    &hm_l LGUI DE_Y   &kp DE_X         &kp DE_C         &kp DE_V                &kp DE_B  &none  &none  &kp DE_N   &kp DE_M                &kp DE_COMMA     &kp DE_PERIOD    &kp DE_MINUS             &kp BACKSPACE
 &none    &none             &none            &lt 9 ESCAPE     &lt 8 SPACE             &mo 5                   &kp ENTER  &mo 4                   &lt 3 BACKSPACE  &none            &none                    &none
