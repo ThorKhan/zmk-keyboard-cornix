@@ -38,7 +38,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -376,7 +375,7 @@
         DE_Symbols {
             display-name = "DE Symbols";
             bindings = <
-&none  &kp DE_EXCLAMATION  &kp DE_AT_SIGN  &kp DE_HASH  &kp DE_DOLLAR     &kp DE_PERCENT                       &kp LS(LA(N6))     &kp DE_AMPS   &kp DE_STAR  &kp DE_LPAR  &kp DE_RPAR       &kp DE_PIPE
+&none  &kp DE_EXCLAMATION  &kp DE_AT_SIGN  &kp DE_HASH  &kp DE_DOLLAR     &kp DE_PERCENT                       &kp DE_LESS_THAN   &kp DE_AMPS   &kp DE_STAR  &kp DE_LPAR  &kp DE_RPAR       &kp DE_PIPE
 &none  &none               &none           &none        &kp DE_LESS_THAN  &kp DE_GREATER_THAN                  &kp DE_MINUS       &kp DE_EQUAL  &kp DE_LBKT  &kp DE_RBKT  &kp DE_BACKSLASH  &kp DE_ACUTE
 &none  &none               &none           &none        &none             &none                &trans  &trans  &kp DE_UNDERSCORE  &kp DE_PLUS   &kp DE_LBRC  &kp DE_RBRC  &kp DE_TILDE      &kp BACKSPACE
 &none  &none               &none           &none        &trans            &trans                               &kp TILDE          &trans        &kp GRAVE    &none        &none             &none
@@ -428,10 +427,10 @@
         Navi_layer {
             display-name = "Navi";
             bindings = <
-&none  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1  &mkp MB3  &mkp MB2  &msc SCRL_UP  &msc SCRL_DOWN  &none
-&none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT     &none           &none
-&none  &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &trans    &trans    &none     &none         &none           &none
-&none  &none  &none           &mo 10          &trans           &trans                          &none     &none     &kp N5    &none         &none           &none
+&none  &none  &none  &none   &kp PAGE_UP       &kp PAGE_DOWN                     &kp LS(LC(TAB))   &none             &none           &kp LC(TAB)        &none  &none
+&none  &none  &none  &none   &none             &kp LS(LC(DE_H))                  &kp LEFT          &kp DOWN          &kp UP          &kp RIGHT          &none  &none
+&none  &none  &none  &none   &kp LS(LC(DE_V))  &none             &trans  &trans  &kp LS(LC(LEFT))  &kp LS(LC(DOWN))  &kp LS(LC(UP))  &kp LS(LC(RIGHT))  &none  &none
+&none  &none  &none  &mo 10  &trans            &trans                            &none             &none             &kp N5          &none              &none  &none
             >;
         };
 
